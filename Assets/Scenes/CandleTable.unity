@@ -123,6 +123,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!54 &76603443 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8717684839115120463, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
+  m_PrefabInstance: {fileID: 2522764859342243712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &76603444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8717684839115120465, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
+  m_PrefabInstance: {fileID: 2522764859342243712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &115765998 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4881404087643837433, guid: bc0dbde9237d3ec459709c11438cac9e, type: 3}
@@ -150,6 +166,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4962402235172185333, guid: 2a380edf1dded6745a1e4429cf1a141d, type: 3}
   m_PrefabInstance: {fileID: 4962402235101123729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &207903915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2177093320918434596, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
+  m_PrefabInstance: {fileID: 2522764859342243712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &242874848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2522764859168734816, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
@@ -173,6 +200,7 @@ MonoBehaviour:
   endPoint: {fileID: 250868714}
   buttonText: {fileID: 115765998}
   clockText: {fileID: 1154131853}
+  speed: 300
 --- !u!1 &250868714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2522764859160736874, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
@@ -799,6 +827,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8862bea98fed5448c81a6a656d69cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1699846160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7032638945250853050, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
+  m_PrefabInstance: {fileID: 2522764859342243712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bff16bb2b8cae9409e88ec4d3527c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1950450821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,11 +1173,11 @@ PrefabInstance:
     - target: {fileID: 2522764857520731677, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: _rigidbody
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76603443}
     - target: {fileID: 2522764857520731678, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: _pointable
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76603444}
     - target: {fileID: 2522764857713890868, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: Panel
       value: 
@@ -1150,7 +1189,7 @@ PrefabInstance:
     - target: {fileID: 2522764858995595396, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: _pointable
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 207903915}
     - target: {fileID: 2522764859168734816, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: m_Name
       value: CandleMelt
@@ -1158,7 +1197,7 @@ PrefabInstance:
     - target: {fileID: 3982465306075706410, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: _interactableView
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1699846160}
     - target: {fileID: 3982465306075706410, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: _trackedTransform
       value: 
@@ -1185,6 +1224,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5936969367122893030, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304517323557583881, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411453246519223902, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7242999265247959020, guid: 0efe5af22d404ac4fae19f7e81072c13, type: 3}

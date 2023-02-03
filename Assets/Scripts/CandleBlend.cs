@@ -50,7 +50,10 @@ namespace Oculus.Interaction
         {
             _grabbable = grabbable;
             _initialPosition = _grabbable.Transform.localPosition;
-            _initialValue = candleStem.GetBlendShapeWeight(0);
+            if(candleStem != null)
+            {
+                _initialValue = candleStem.GetBlendShapeWeight(0);
+            }
             GenerateParentConstraints();
         }
 
@@ -97,14 +100,15 @@ namespace Oculus.Interaction
                 constrainedPosition = Mathf.Max(constrainedPosition, _parentConstraints.MinY.Value);
 
             }
-            if (_parentConstraints.MaxY.Constrain)
+/*            if (_parentConstraints.MaxY.Constrain)
             {
                 constrainedPosition = Mathf.Min(constrainedPosition, _parentConstraints.MaxY.Value);
+            }*/
 
-
+            if(candleMelt != null)
+            {
+                candleMelt.SetTimer(constrainedPosition);
             }
-
-            candleMelt.SetTimer(constrainedPosition);
 
         }
 
