@@ -15,6 +15,7 @@ public class CandleMelt : MonoBehaviour
     public TextMeshProUGUI clockText;
     public float speed;
 
+    private float maxDuration;
     private float timeRemaining = 1800f;
     private float minutes = 0;
     private float seconds = 0;
@@ -24,6 +25,7 @@ public class CandleMelt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxDuration = timeRemaining;
         SetFirePosition();
         minutes = Mathf.FloorToInt(timeRemaining / 60);
         seconds = Mathf.FloorToInt(timeRemaining % 60);
@@ -125,11 +127,12 @@ public class CandleMelt : MonoBehaviour
             //variable speed is the rate at which the candle values are adjusted
             var val = Mathf.Min(Mathf.Round((value * speed)), 100);
 
+            var minuteIncrementValue = 60 / (maxDuration / 100);
             //In order to adjust the candle timer by 1 minutes increments, the blend shape weight value must be adjusted at a rate of val * the result of 60/18, which is 3.333333333333333f. The candle blend value will now move at a rate of 3.333333333333333f
-            candleStem.SetBlendShapeWeight(0, Mathf.Min(val * 3.333333333333333f, 100));
+            candleStem.SetBlendShapeWeight(0, Mathf.Min(val * minuteIncrementValue, 100));
 
             //1800 represents the float value equivalent of 30 minutes. 18 * the blend shape weight is the value to convert the current blend value into time
-            timeRemaining = 1800 - (18 * candleStem.GetBlendShapeWeight(0));
+            timeRemaining = maxDuration - ((maxDuration / 100) * candleStem.GetBlendShapeWeight(0));
             SetFirePosition();
         }
     }
