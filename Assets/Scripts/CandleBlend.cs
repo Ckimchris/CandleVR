@@ -100,10 +100,6 @@ namespace Oculus.Interaction
                 constrainedPosition = Mathf.Max(constrainedPosition, _parentConstraints.MinY.Value);
 
             }
-/*            if (_parentConstraints.MaxY.Constrain)
-            {
-                constrainedPosition = Mathf.Min(constrainedPosition, _parentConstraints.MaxY.Value);
-            }*/
 
             if(candleMelt != null)
             {
